@@ -1,25 +1,19 @@
 import {
-  Entity, PrimaryColumn, Column, JoinColumn, ManyToOne,
+  Entity, Column, PrimaryColumn, CreateDateColumn, UpdateDateColumn, JoinColumn, ManyToOne, PrimaryGeneratedColumn,
 } from 'typeorm';
 import { v4 as uuid } from 'uuid';
 import { User } from './User';
 
-@Entity('books')
-class Book {
+@Entity('posts')
+class Post {
   @PrimaryColumn()
   readonly id: string
 
   @Column()
-  cover: string
+  title: string
 
   @Column()
-  book_title: string
-
-  @Column()
-  publisher: string
-
-  @Column()
-  authors: string
+  description: string
 
   @Column()
   user_sender: string
@@ -28,6 +22,12 @@ class Book {
   @ManyToOne(() => User)
   userSender: User
 
+  @CreateDateColumn()
+  created_at: Date
+
+  @UpdateDateColumn()
+  updated_at: Date
+
   constructor() {
     if (!this.id) {
       this.id = uuid();
@@ -35,4 +35,4 @@ class Book {
   }
 }
 
-export { Book };
+export { Post };
