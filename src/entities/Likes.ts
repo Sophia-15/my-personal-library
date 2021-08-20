@@ -8,7 +8,7 @@ import { User } from './User';
 @Entity('likes')
 class Likes {
   @PrimaryColumn()
-  id: string
+  readonly id: string
 
   @Column()
   user_liking: string
