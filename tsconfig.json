@@ -2,6 +2,7 @@
   "compilerOptions": {
     "target": "es2017",
     "module": "commonjs",
+    "strict": false,
 
     "typeRoots": ["./src/@types"],
     "esModuleInterop": true,
