@@ -26,9 +26,9 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - [TypeORM](https://typeorm.io/#/)
 - [Express](https://expressjs.com/pt-br/)
 - [SQL Editor Beekeeper Studio](https://www.beekeeperstudio.io/)
-- [JWT]('https://jwt.io')
-- [Bcrypt]('https://www.npmjs.com/package/bcrypt')
-- [SQLite]('')
+- [JWT](https://jwt.io)
+- [Bcrypt](https://www.npmjs.com/package/bcrypt)
+- [SQLite](https://www.sqlite.org/index.html)
 
 ## 💻 Projeto
 
