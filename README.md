@@ -26,13 +26,13 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - [TypeORM](https://typeorm.io/#/)
 - [Express](https://expressjs.com/pt-br/)
 - [SQL Editor Beekeeper Studio](https://www.beekeeperstudio.io/)
-- [JWT]('https://jwt.io')
-- [Bcrypt]('https://www.npmjs.com/package/bcrypt')
-- [SQLite]('')
+- [JWT](https://jwt.io)
+- [Bcrypt](https://www.npmjs.com/package/bcrypt)
+- [SQLite](https://www.sqlite.org/index.html)
 
 ## 💻 Projeto
 
-My Personal Library é um projeto onde o usuário poderá registrar os seus livros lidos, criar posts e dar like no post dos outros. De ínicio ele não tem muitas funcionalidades, porém pretendo acrescentar mais ao longo do meu aprendizado.
+My Personal Library é um projeto onde o usuário poderá registrar os seus livros lidos, criar posts e dar like no post dos outros. De início ele não tem muitas funcionalidades, porém pretendo acrescentar mais ao longo do meu aprendizado.
 
 ## 🔶 Diagrama
 
