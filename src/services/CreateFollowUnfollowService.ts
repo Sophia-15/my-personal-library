@@ -20,6 +20,10 @@ class CreateFollowUnfollowService {
 
     const userFollowedExists = await followUnfollowRepository.find({ user_followed });
 
+    if (user_followed === user_following) {
+      throw new AppError('You cannot follow yourself!');
+    }
+
     if (!userFollowedExists) {
       throw new AppError('The user you are trying to follow does not exist!', 404);
     }

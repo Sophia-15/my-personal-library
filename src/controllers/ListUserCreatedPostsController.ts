@@ -3,7 +3,7 @@ import { ListUserCreatedPostsService } from '../services/ListUserCreatedPostsSer
 
 class ListUserCreatedPostsController {
   async handle(req: Request, res: Response) {
-    const { user_id } = req;
+    const { user_id } = req.params;
 
     const listCreatedUserPostService = new ListUserCreatedPostsService();
 
