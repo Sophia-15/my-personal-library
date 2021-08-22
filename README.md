@@ -28,7 +28,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - [SQL Editor Beekeeper Studio](https://www.beekeeperstudio.io/)
 - [JWT](https://jwt.io)
 - [Bcrypt](https://www.npmjs.com/package/bcrypt)
-- [SQLite](https://www.sqlite.org/index.html)
+- [Postgres]()
 
 ## 💻 Projeto
 
