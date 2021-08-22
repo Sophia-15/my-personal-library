@@ -9,6 +9,7 @@ import { ListUserCreatedBooksController } from './controllers/ListUserCreatedBoo
 import { ListUserCreatedPostsController } from './controllers/ListUserCreatedPostsController';
 import { ListAllPostController } from './controllers/ListAllPostController';
 import { CreateFollowUnfollowController } from './controllers/CreateFollowUnfollowController';
+import { ListPostLikesController } from './controllers/ListPostLikesController';
 
 const router = Router();
 
@@ -21,6 +22,7 @@ const listUserCreatedBookController = new ListUserCreatedBooksController();
 const listUserCreatedPostController = new ListUserCreatedPostsController();
 const listAllPostsController = new ListAllPostController();
 const createFollowUnfollowController = new CreateFollowUnfollowController();
+const listPostLikesController = new ListPostLikesController();
 
 router.post('/register', createUserController.handle);
 router.post('/login', authenticateUserController.handle);
@@ -32,5 +34,6 @@ router.post('/follow', ensureAuthentication, createFollowUnfollowController.hand
 router.get('/user/books', ensureAuthentication, listUserCreatedBookController.handle);
 router.get('/user/posts', ensureAuthentication, listUserCreatedPostController.handle);
 router.get('/posts', listAllPostsController.handle);
+router.get('/likes/:post_id', listPostLikesController.handle);
 
 export { router };
