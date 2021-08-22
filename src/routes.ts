@@ -8,6 +8,7 @@ import { ensureAuthentication } from './middlewares/ensureAuthentication';
 import { ListUserCreatedBooksController } from './controllers/ListUserCreatedBooksController';
 import { ListUserCreatedPostsController } from './controllers/ListUserCreatedPostsController';
 import { ListAllPostController } from './controllers/ListAllPostController';
+import { CreateFollowUnfollowController } from './controllers/CreateFollowUnfollowController';
 
 const router = Router();
 
@@ -19,12 +20,14 @@ const createLikeController = new CreateLikeController();
 const listUserCreatedBookController = new ListUserCreatedBooksController();
 const listUserCreatedPostController = new ListUserCreatedPostsController();
 const listAllPostsController = new ListAllPostController();
+const createFollowUnfollowController = new CreateFollowUnfollowController();
 
 router.post('/register', createUserController.handle);
 router.post('/login', authenticateUserController.handle);
 router.post('/book', ensureAuthentication, createBookController.handle);
 router.post('/post', ensureAuthentication, createPostController.handle);
 router.post('/like', ensureAuthentication, createLikeController.handle);
+router.post('/follow', ensureAuthentication, createFollowUnfollowController.handle);
 
 router.get('/user/books', ensureAuthentication, listUserCreatedBookController.handle);
 router.get('/user/posts', ensureAuthentication, listUserCreatedPostController.handle);
