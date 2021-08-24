@@ -5,6 +5,6 @@ const loginRouter = Router();
 
 const authenticateUserController = new AuthenticateUserController();
 
-loginRouter.post('/login', authenticateUserController.handle);
+loginRouter.post('/', authenticateUserController.handle);
 
 export { loginRouter };
