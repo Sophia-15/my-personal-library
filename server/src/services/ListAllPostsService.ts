@@ -6,7 +6,9 @@ class ListAllPostsService {
   async execute() {
     const postsRepository = getCustomRepository(PostRepository);
 
-    const posts = await postsRepository.find();
+    const posts = await postsRepository.find({
+      relations: ['userSender'],
+    });
 
     if (!posts) {
       throw new AppError('There is nothing to see here!', 404);

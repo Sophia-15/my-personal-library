@@ -1,15 +1,15 @@
 import { Router } from 'express';
-import { booksRouter } from './books.router';
-import { commentsRouter } from './comments.router';
-import { followRouter } from './follow.router';
+import { booksRouter } from './books.routes';
+import { commentsRouter } from './comments.routes';
+import { followRouter } from './follow.routes';
 import { likesRouter } from './likes.routes';
-import { loginRouter } from './login.router';
+import { loginRouter } from './login.routes';
 import { postsRouter } from './posts.routes';
-import { registerRouter } from './user.router';
+import { userRouter } from './user.routes';
 
 const router = Router();
 
-router.use('/register', registerRouter);
+router.use('/user', userRouter);
 router.use('/login', loginRouter);
 router.use('/follow', followRouter);
 router.use('/books', booksRouter);
